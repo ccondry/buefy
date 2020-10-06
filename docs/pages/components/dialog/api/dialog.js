@@ -151,6 +151,13 @@ export default [
                 type: 'Boolean',
                 values: '—',
                 default: '<code>false</code>'
+            },
+            {
+                name: '<code>rounded</code>',
+                description: `Use rounded buttons.`,
+                type: 'Boolean',
+                values: '<code>true</code>, <code>false</code>',
+                default: '<code>false</code>'
             }
         ]
     }

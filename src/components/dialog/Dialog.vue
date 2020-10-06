@@ -54,16 +54,16 @@
                 </section>
 
                 <footer class="modal-card-foot">
-                    <button
+                    <b-button
                         v-if="showCancel"
-                        class="button"
                         ref="cancelButton"
-                        @click="cancel('button')">{{ cancelText }}</button>
-                    <button
-                        class="button"
+                        :rounded="rounded"
+                        @click="cancel('button')">{{ cancelText }}</b-button>
+                    <b-button
                         :class="type"
                         ref="confirmButton"
-                        @click="confirm">{{ confirmText }}</button>
+                        :rounded="rounded"
+                        @click="confirm">{{ confirmText }}</b-button>
                 </footer>
             </div>
         </div>
@@ -151,7 +151,11 @@ export default {
                 ].indexOf(value) >= 0
             }
         },
-        ariaModal: Boolean
+        ariaModal: Boolean,
+        rounded: {
+            type: Boolean,
+            default: false
+        }
     },
     data() {
         const prompt = this.hasInput
