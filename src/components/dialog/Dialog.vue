@@ -246,9 +246,9 @@ export default {
             if (this.hasInput) {
                 this.$refs.input.focus()
             } else if (this.focusOn === 'cancel' && this.showCancel) {
-                this.$refs.cancelButton.focus()
+                this.$refs.cancelButton.$el.focus()
             } else {
-                this.$refs.confirmButton.focus()
+                this.$refs.confirmButton.$el.focus()
             }
         })
     }
